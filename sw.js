@@ -2,7 +2,7 @@
 importScripts('./js/sw-util.js');
 
 
-const STATIC_CACHE = 'static-v2';
+const STATIC_CACHE = 'static-v3';
 const DYNAMIC_CACHE = 'dynamitic-v1';
 const INMUTABLE_CACHE = 'inmutable-v1';
 
@@ -42,7 +42,7 @@ self.addEventListener('install', event => {
 self.addEventListener('activate', e => {
     const respuesta = caches.keys().then( keys => {
         keys.forEach( key => {
-            // static-v4
+            
             if (  key !== STATIC_CACHE && key.includes('static') ) {
                 return caches.delete(key);
             }
