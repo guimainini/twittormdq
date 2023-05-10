@@ -1,10 +1,6 @@
 //imports
 importScripts('./js/sw-util.js');
 
-let url = window.location.href;
-console.log('url', url);
-
-
 
 const STATIC_CACHE = 'static-v2';
 const DYNAMIC_CACHE = 'dynamitic-v1';

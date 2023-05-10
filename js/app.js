@@ -1,7 +1,4 @@
 
-let url = window.location.href;
-console.log('url', url);
-
 if(navigator.serviceWorker){
     navigator.serviceWorker.register('./sw.js');
 }
